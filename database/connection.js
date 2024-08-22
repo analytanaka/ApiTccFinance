@@ -17,3 +17,13 @@ const config = {
     connectionLimit: 10,
     queueLimit: 0, 
 }
+
+try{
+    connection = mysql.createPool(config);
+
+    console.log('Chamou a conexão  MySql');
+} catch(error){
+    console.log(error);
+}
+
+module.exports = connection;
